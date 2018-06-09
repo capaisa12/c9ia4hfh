@@ -14,7 +14,7 @@ class RoomsController < ApplicationController
   def update
     @room = Room.find(params[:id])
     if @room.update(room_params)
-      redirect_to room_path, notice: "La habitacion ha sido modificada satisfactoriamente"
+      redirect_to rooms_path, notice: "La habitacion ha sido modificada satisfactoriamente"
     else
       render :edit
     end
